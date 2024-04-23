@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branches</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eaeded4e;
+            background-size: cover;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.29); 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          
+        }
+        h1 {
+            text-align: center;
+            margin-top: 0;
+            font-size: larger;
+        }
+        .branch {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #e02222;
+            border-radius: 5px;
+            background-color: #f9f9f938;
+        }
+        .branch h2 {
+            margin-top: 0;
+        }
+        .branch p {
+            margin: 10px 0;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 200px;
+            height: auto;
+        }
+        video#bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        nav a {
+            font-size: large;
+            margin-left: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        nav a:hover {
+            color: #007bff;
+        }
+        .back-button {
+            font-size: large;
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+        .marquee {
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+        .marquee img {
+            max-width: 400px;
+            height: auto;
+            vertical-align: middle;
+        }
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>   
+    <video id="bg-video" autoplay loop muted>
+        <source src="video1.mp4" type="video/mp4">
+    </video>
+    <div class="marquee">
+        <img src="logo.svg" alt="Company Logo">
+    </div>
+    <div class="container">
+        <center>
+            <img src="logo.svg" alt="Company Logo">
+        </center>
+        <h1>Branches</h1>
+
+        <div class="branch">
+            <p><strong>Location:</strong> Barcelona</p>
+            <p><strong>Address:</strong> L’Hospitalet De Llobregat, Barcelona, 08908</p>
+        </div>
+
+        <div class="branch">
+            <p><strong>Location:</strong> Munich</p>
+            <p><strong>Address:</strong> Wasserburger Straße 27 Munich, Haar, 85540</p>
+        </div>
+        <div class="branch">
+            <p><strong>Location:</strong> Miami</p>
+            <p><strong>Address:</strong>2300 NE 151th Street North Miami , Florida, 33181
+            </p>
+        </div>
+        <div class="branch">
+            <p><strong>Location:</strong>Boston</p>
+            <p><strong>Address:</strong>22 Pond Street Norwell, Massachusetts, 02061</p>
+        </div>
+        <a href="Home.html" class="back-button">Back to Home</a>
+    </div>
+</body>
+</html>

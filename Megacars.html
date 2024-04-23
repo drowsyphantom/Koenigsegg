@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative; /* Ensure body is positioned */
+        }
+
+        .product {
+            float: left;
+            display: inline;
+            width: 20px;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            background-color: #a1d9e7;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            display: block;
+            width: 450px;
+            height: 450px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 40px;
+        }
+
+        img {
+            float: left;
+            height: 150px;
+            width: 350px;
+        }
+
+        p1 {
+            float: left;
+            width: 300px;
+            padding-top: 200px;
+            margin-left: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 30px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        .back-button {
+            font-size: large;
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+            position: absolute; /* Position absolute */
+        }
+
+        .back-button.top-right {
+            top: 20px; /* Distance from top */
+            right: 20px; /* Distance from right */
+        }
+
+        .back-button.bottom-right {
+            bottom: 20px; /* Distance from bottom */
+            right: 20px; /* Distance from right */
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function fun1() {
+            document.getElementById('desc1').innerHTML = "CC850";
+            var desc1Element = document.getElementById('desc1');
+            desc1Element.innerHTML = "CC850";
+            desc1Element.style.fontSize = "30px";
+        }
+
+        function fun2() {
+            document.getElementById('desc1').innerHTML = "";
+        }
+
+        function fun3() {
+            document.getElementById('desc2').innerHTML = "GEMERA";
+            var desc2Element = document.getElementById('desc2');
+            desc2Element.innerHTML = "GEMERA";
+            desc2Element.style.fontSize = "30px";
+        }
+
+        function fun4() {
+            document.getElementById('desc2').innerHTML = "";
+        }
+
+        function fun5() {
+            document.getElementById('desc3').innerHTML = "JESKO TRACK";
+            var desc3Element = document.getElementById('desc3');
+            desc3Element.innerHTML = "JESKO TRACK";
+            desc3Element.style.fontSize = "30px";
+        }
+
+        function fun6() {
+            document.getElementById('desc3').innerHTML = "";
+        }
+
+        function fun7() {
+            document.getElementById('desc4').innerHTML = "JESKO ABSOLUT";
+            var desc4Element = document.getElementById('desc4');
+            desc4Element.innerHTML = "JESKO ABSOLUT";
+            desc4Element.style.fontSize = "30px";
+        }
+
+        function fun8() {
+            document.getElementById('desc4').innerHTML = "";
+        }
+    </script>
+</head>
+<body background="https://www.wsupercars.com/wallpapers-regular/Koenigsegg/2021-Koenigsegg-Gemera-012-1600.jpg">
+    <img src="logo.svg" alt="Image not found">
+    <p1>22-year old Christian von Koenigsegg
+        starts Koenigsegg Automotive on August
+        12, 1994. A classic David versus Goliath
+        narrative takes shape. It begins with a
+        young man who had no track record of
+        car manufacturing and little funding. But
+        he was armed with a deep passion for
+        ultimate performance and a dream to
+        build the world's greatest sports car.</p1>
+    <div class="container">
+        <div class="product">
+            <table>
+                <tr>
+                    <th style="padding: 100px;">
+                        <a href="https://www.koenigsegg.com/model/cc850">
+                        <img src="Koenigsegg CC850.jpg" alt="Image not found" onmouseover="fun1()" onmouseout="fun2()"></a>
+                        <p id="desc1"></p>
+                    </th>
+                    <th>
+                        <a href="https://www.koenigsegg.com/model/gemera">
+                        <img src="Koenigsegg GEMERA.png" alt="Image not found" onmouseover="fun3()" onmouseout="fun4()"></a>
+                        <p id="desc2"></p>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="padding: 100px;">
+                        <a href="https://www.koenigsegg.com/model/jesko-attack">
+                        <img src="Koenigsegg Jesko Track.jpg" alt="Image not found" onmouseover="fun5()" onmouseout="fun6()"></a>
+                        <p id="desc3"></p>
+                    </th>
+                    <th>
+                        <a href="https://www.koenigsegg.com/model/jesko-absolut">
+                        <img src="Koenigsegg Jesko Absolut.png" alt="Image not found" onmouseover="fun7()" onmouseout="fun8()"></a>
+                        <p id="desc4"></p>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <a href="home.html" class="back-button top-right">Back to Home</a>
+    <a href="home.html" class="back-button bottom-right">Back to Home</a>
+</body>
+</html>

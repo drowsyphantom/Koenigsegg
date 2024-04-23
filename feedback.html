@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Feedback Form</title>
+    <style>
+        body {
+            background-image: url("Regera.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        #container {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+        
+        form {
+            padding: 20px;
+            border-radius: 10px;
+            /*background-color: rgba(255, 255, 255, 0.8); /* Adjust opacity for better readability */
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Ensure borders are consistent */
+        }
+        
+        th {
+            text-align: center;
+            font-size: 40px;
+            padding-bottom: 1px;
+            background-color: rgb(16, 119, 119);
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        td {
+            color: white;
+            padding: 10px;
+            font-size: 20px; /* Adjust font size for better readability */
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: calc(100% - 22px); /* Adjust input width to account for padding */
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+            box-sizing: border-box;
+            font-size: 16px; /* Adjust font size for better readability */
+        }
+        
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 15px 20px; /* Adjust padding */
+            margin-right: 20px; /* Add margin between buttons */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 20px;
+        }
+
+        input[type="reset"] {
+            margin-right: 40px; /* Increase margin for more space */
+        }
+        
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+            font-size: 24px;
+        }
+
+        button.back-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: blue; /* Change color to blue */
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button.back-btn:hover {
+            background-color: #555;
+        }
+        
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(165, 42, 42, 0.459);
+            text-align: center;
+        }
+
+        footer b {
+            color: white;
+        }
+    </style>
+    <script>
+        function check_fname() {
+    var fname = document.getElementById('fname_div').value;
+    if (/\d/.test(fname)) {
+        alert("First name cannot contain numbers");
+        return false;
+    }
+    return true;
+    }   
+    function last_fname() {
+    var lname = document.getElementById('lname_div').value;
+    if (/\d/.test(lname)) {
+        alert("Last name cannot contain numbers");
+        return false;
+    }
+    return true;
+    }   
+    function check_email() {
+    var email = document.getElementById('email').value;
+    var a = email.indexOf("@");
+    var d = email.lastIndexOf(".");
+    if (a >= 0 && d >= 0 && d > a) {
+        return true;
+    } else {
+        alert("Please enter a valid email address");
+        return false;
+    }
+}
+function check_mobile() {
+    var mobile = document.getElementById('mobile').value;
+    if (/\D/.test(mobile)) {
+        alert("Mobile number cannot contain alphabets");
+        return false;
+    }
+    return true;
+}
+        function validateForm() {
+            return check_fname() && check_lname && check_email() && check_mobile();
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <form action="result.asp" method="post" onsubmit="return validateForm()">
+            <table>
+                <tr>
+                    <th colspan="2">Feedback Form</th>
+                </tr>
+                <tr>
+                    <td>First Name <input type="text" name="firstname" id="fname_div"></td>
+                    <td>Last Name <input type="text" name="lastname"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Mobile <input type="text" name="mobile" id="mobile"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Email ID <input type="email" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Feedback/Suggestions <textarea name="feedback" required></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <button class="back-btn" onclick="goBack()">Back</button>
+<footer>
+    <marquee behavior="loop" direction="left">
+        <b>Copyright © since 1994 – Koenigsegg Automotive AB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+    </marquee>
+</footer>
+</body>
+</html>
